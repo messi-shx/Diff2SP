@@ -1,0 +1,11 @@
+python -u repeat_sample_eval.py \
+  --out_dir ./output_model \
+  --data_dir ./data \
+  --device cuda \
+  --tags gan noise noopt full \
+  --n 50 \
+  --n_real 500 \
+  --n_gen 100 \
+  --a_tag full \
+  --repeats 5 \
+  --save_prefix repeat_eval_gan

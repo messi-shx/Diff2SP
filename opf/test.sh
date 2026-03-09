@@ -1,0 +1,13 @@
+python -u main.py \
+  --mode train \
+  --data_dir ./data \
+  --out_dir ./output_model \
+  --ablation full \
+  --epochs 20 \
+  --batch_size 128 \
+  --device cuda \
+  --lambda_opt 100 \
+  --lr_A 2e-3 \
+  --warmup_epochs 1 \
+  --a_seed 123 \
+  --a_init_mode aligned
