@@ -67,33 +67,6 @@ In this setting:
 
 This directory contains the main implementation of the paper's optimization-guided Diff2SP framework.
 
-## Power Systems Formulation in the Paper
-
-For the real-world study, the model generates uncertainty scenarios built from correlated wind, solar, and load signals. These regional scenarios are mapped to bus-level demand and then evaluated through a DC-OPF layer.
-
-The key question is:
-
-> Do generated scenarios lead to better downstream first-stage decisions?
-
-Diff2SP is designed to improve that answer by explicitly incorporating optimization structure into training.
-
-## What This Submission Contains
-
-The package includes:
-- the paper PDF: `diff2sp.pdf`
-- synthetic experiment code in `numerical/`
-- real-world OPF experiment code in `opf/`
-- pretrained checkpoints and saved matrices needed for reproduction
-
-## Intended Reading Order
-
-If you want to understand the method first, the most relevant order is:
-
-1. Read `diff2sp.pdf`
-2. Look at `opf/main.py` for the full method
-3. Look at `opf/eval_err.py` and `opf/repeat_sample_eval.py` for the evaluation logic
-4. Look at `numerical/` for the Section 5.1 controlled experiments
-
 ## Summary
 
 Diff2SP is a diffusion-based scenario generation framework for stochastic programming. Its main contribution is to move beyond pure data generation and train the model in a way that is explicitly aware of downstream optimization quality. The paper shows this through both controlled numerical experiments and a real-world power systems case study.
